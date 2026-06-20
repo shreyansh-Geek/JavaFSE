@@ -1,0 +1,15 @@
+--- Linear Search ---
+Found at index 2: Product [ID=3, Name=Book, Category=Education]
+
+--- Sorted Products (for Binary Search) ---
+Product [ID=3, Name=Book, Category=Education]
+Product [ID=1, Name=Laptop, Category=Electronics]
+Product [ID=4, Name=Phone, Category=Electronics]
+Product [ID=5, Name=Shoes, Category=Footwear]
+Product [ID=2, Name=T-Shirt, Category=Clothing]
+
+--- Binary Search ---
+Found at index 2: Product [ID=4, Name=Phone, Category=Electronics]
+
+--- Analysis ---
+Linear Search: O(n) | Binary Search: O(log n)
