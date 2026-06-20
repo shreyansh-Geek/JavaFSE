@@ -1,0 +1,5 @@
+Recursive Prediction: $16288.95
+Optimized Prediction: $16288.95
+
+--- Analysis ---
+Recursive: O(n) time, O(n) stack space | Optimized: O(1)
