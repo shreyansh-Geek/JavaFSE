@@ -1,0 +1,15 @@
+--- Linear Search ---
+Found at index 2: Book [ID=3, Title=Clean Code, Author=Robert C. Martin]
+
+--- Sorted Books (for Binary Search) ---
+Book [ID=4, Title=Algorithms, Author=CLRS]
+Book [ID=3, Title=Clean Code, Author=Robert C. Martin]
+Book [ID=2, Title=Data Structures, Author=Robert Lafore]
+Book [ID=5, Title=Design Patterns, Author=Gang of Four]
+Book [ID=1, Title=Java Programming, Author=James Gosling]
+
+--- Binary Search ---
+Found at index 0: Book [ID=4, Title=Algorithms, Author=CLRS]
+
+--- Analysis ---
+Linear Search: O(n) | Binary Search: O(log n)
