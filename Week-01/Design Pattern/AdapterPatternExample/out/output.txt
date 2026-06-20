@@ -1,0 +1,2 @@
+Processing $150.0 via PayPal
+Charging $250.0 via Stripe
