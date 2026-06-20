@@ -1,0 +1,21 @@
+Added: Employee [ID=101, Name=Shreyansh Pandit, Position=Software Engineer, Salary=$75000.0]
+Added: Employee [ID=102, Name=Alice, Position=Manager, Salary=$90000.0]
+Added: Employee [ID=103, Name=Bob, Position=Analyst, Salary=$60000.0]
+
+--- All Employees ---
+Employee [ID=101, Name=Shreyansh Pandit, Position=Software Engineer, Salary=$75000.0]
+Employee [ID=102, Name=Alice, Position=Manager, Salary=$90000.0]
+Employee [ID=103, Name=Bob, Position=Analyst, Salary=$60000.0]
+
+--- Searching for Employee 102 ---
+Found: Employee [ID=102, Name=Alice, Position=Manager, Salary=$90000.0]
+
+--- Deleting Employee 101 ---
+Deleted employee with ID 101
+
+--- Employees After Deletion ---
+Employee [ID=103, Name=Bob, Position=Analyst, Salary=$60000.0]
+Employee [ID=102, Name=Alice, Position=Manager, Salary=$90000.0]
+
+--- Analysis ---
+Add: O(1) amortized | Search: O(n) | Traverse: O(n) | Delete: O(n)
