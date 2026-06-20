@@ -1,0 +1,21 @@
+Added: Product [ID=101, Name=Laptop, Qty=10, Price=$75000.0]
+Added: Product [ID=102, Name=Mouse, Qty=50, Price=$500.0]
+Added: Product [ID=103, Name=Keyboard, Qty=30, Price=$1200.0]
+
+--- All Products ---
+Product [ID=101, Name=Laptop, Qty=10, Price=$75000.0]
+Product [ID=102, Name=Mouse, Qty=50, Price=$500.0]
+Product [ID=103, Name=Keyboard, Qty=30, Price=$1200.0]
+
+--- Updating Product 102 ---
+Updated: Product [ID=102, Name=Wireless Mouse, Qty=40, Price=$650.0]
+
+--- Deleting Product 103 ---
+Deleted: Product [ID=103, Name=Keyboard, Qty=30, Price=$1200.0]
+
+--- Final Inventory ---
+Product [ID=101, Name=Laptop, Qty=10, Price=$75000.0]
+Product [ID=102, Name=Wireless Mouse, Qty=40, Price=$650.0]
+
+--- Analysis ---
+Add: O(1) average, O(n) worst case | Update: O(1) average, O(n) worst case | Delete: O(1) average, O(n) worst case
