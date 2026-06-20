@@ -1,0 +1,4 @@
+MobileApp received alert: AAPL is now $155.5
+WebApp received alert: AAPL is now $155.5
+MobileApp received alert: AAPL is now $160.75
+WebApp received alert: AAPL is now $160.75
