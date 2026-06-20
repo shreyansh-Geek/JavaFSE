@@ -1,0 +1,21 @@
+Added: Task [ID=1, Name=Design database, Status=Pending]
+Added: Task [ID=2, Name=Implement login, Status=In Progress]
+Added: Task [ID=3, Name=Write tests, Status=Pending]
+
+--- All Tasks ---
+Task [ID=1, Name=Design database, Status=Pending]
+Task [ID=2, Name=Implement login, Status=In Progress]
+Task [ID=3, Name=Write tests, Status=Pending]
+
+--- Searching for Task 2 ---
+Found: Task [ID=2, Name=Implement login, Status=In Progress]
+
+--- Deleting Task 1 ---
+Deleted task with ID 1
+
+--- Tasks After Deletion ---
+Task [ID=2, Name=Implement login, Status=In Progress]
+Task [ID=3, Name=Write tests, Status=Pending]
+
+--- Analysis ---
+Add: O(n) | Search: O(n) | Traverse: O(n) | Delete: O(n)
