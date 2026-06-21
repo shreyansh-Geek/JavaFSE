@@ -1,0 +1,8 @@
+--- Scenario 1: Loan Discount for Senior Citizens ---
+Applied 1% discount to Loan 2 for customer age 65
+
+--- Scenario 2: VIP Promotion ---
+Customer Shreyansh Pandit promoted to VIP
+
+--- Scenario 3: Loan Due Reminders ---
+REMINDER: Customer Shreyansh Pandit (ID: 3) has Loan 2 due on 2026-12-21
