@@ -1,0 +1,16 @@
+--- Scenario 1: Monthly Statement ---
+
+--- Statement for John Doe (ID: 1) ---
+21-JUN-26 | Deposit | $200 | Account: 1
+
+--- Statement for Jane Smith (ID: 2) ---
+21-JUN-26 | Withdrawal | $300 | Account: 2
+
+--- Scenario 2: Annual Fee ---
+Applied $50 fee to account 1 (Savings)
+Applied $50 fee to account 2 (Checking)
+Applied $50 fee to account 3 (Savings)
+
+--- Scenario 3: Update Loan Interest Rates ---
+Loan 1: Rate changed from 5% to 4.75%
+Loan 2: Rate changed from 6% to 5.5%
