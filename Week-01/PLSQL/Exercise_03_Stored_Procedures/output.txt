@@ -1,0 +1,14 @@
+--- Scenario 1: Process Monthly Interest ---
+EXEC ProcessMonthlyInterest;
+Monthly interest of 1% applied to all savings accounts.
+
+--- Scenario 2: Update Employee Bonus ---
+EXEC UpdateEmployeeBonus('IT', 15);
+Bonus of 15% applied to department IT
+
+--- Scenario 3: Transfer Funds ---
+EXEC TransferFunds(1, 2, 300);
+Transferred $300 successfully.
+
+EXEC TransferFunds(1, 2, 5000);
+ORA-20001: Insufficient balance.
