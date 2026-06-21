@@ -1,0 +1,20 @@
+--- Scenario 1: Safe Transfer Funds ---
+EXEC SafeTransferFunds(1, 2, 500);
+Transferred $500 from account 1 to account 2
+
+EXEC SafeTransferFunds(1, 2, 2000);
+Transfer failed: ORA-20001: Insufficient funds in account 1
+
+--- Scenario 2: Update Salary ---
+EXEC UpdateSalary(1, 10);
+Salary updated for employee 1 by 10%
+
+EXEC UpdateSalary(99, 5);
+Error: Employee with ID 99 does not exist.
+
+--- Scenario 3: Add New Customer ---
+EXEC AddNewCustomer(3, 'Test User', SYSDATE, 1000);
+Error: Customer with ID 3 already exists.
+
+EXEC AddNewCustomer(4, 'Shreyansh Pandit', TO_DATE('1998-06-15','YYYY-MM-DD'), 5000);
+Customer Shreyansh Pandit added successfully.
