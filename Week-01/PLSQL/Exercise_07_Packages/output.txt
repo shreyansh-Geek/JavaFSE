@@ -1,0 +1,26 @@
+--- Scenario 1: CustomerManagement Package ---
+EXEC CustomerManagement.AddCustomer(5, 'Shreyansh Pandit', TO_DATE('1998-06-15','YYYY-MM-DD'), 8000);
+Customer Shreyansh Pandit added.
+
+EXEC CustomerManagement.UpdateCustomerDetails(5, 'Shreyansh Pandit', 9000);
+Customer 5 updated.
+
+SELECT CustomerManagement.GetCustomerBalance(1) FROM DUAL;
+Result: 500 (after transfer and fee deductions)
+
+--- Scenario 2: EmployeeManagement Package ---
+EXEC EmployeeManagement.HireEmployee(3, 'Charlie', 'Analyst', 55000, 'Finance');
+Employee Charlie hired.
+
+SELECT EmployeeManagement.CalculateAnnualSalary(1) FROM DUAL;
+Result: 840000 (70000 * 12 after bonus)
+
+--- Scenario 3: AccountOperations Package ---
+EXEC AccountOperations.OpenAccount(4, 1, 'Savings', 2000);
+Account 4 opened for customer 1.
+
+SELECT AccountOperations.GetTotalBalance(1) FROM DUAL;
+Result: 2150 (across all accounts)
+
+EXEC AccountOperations.CloseAccount(4);
+Account 4 closed.
