@@ -1,0 +1,20 @@
+=== LoggingExample ===
+00:44:04.951 [main] ERROR LoggingExample - This is an error message
+00:44:04.956 [main] WARN LoggingExample - This is a warning message
+00:44:04.956 [main] INFO LoggingExample - This is an info message
+00:44:04.956 [main] DEBUG LoggingExample - This is a debug message
+00:44:04.956 [main] INFO LoggingExample - User Shreyansh Pandit is 25 years old
+
+=== ParameterizedLogging ===
+00:44:05.355 [main] INFO ParameterizedLogging - Transaction: Account=ACC-1001, Amount=$2500.5, Status=SUCCESS
+00:44:05.367 [main] WARN ParameterizedLogging - Low balance warning for account: ACC-1001
+00:44:05.368 [main] ERROR ParameterizedLogging - Failed to process transaction for account: ACC-1001 | Error: Insufficient funds
+
+=== AppenderExample ===
+00:44:05.803 [main] INFO AppenderExample - Application started
+00:44:05.808 [main] DEBUG AppenderExample - Loading configuration...
+00:44:05.808 [main] WARN AppenderExample - Configuration file not found, using defaults
+00:44:05.812 [main] ERROR AppenderExample - Failed to connect to database
+java.lang.Exception: Connection timeout
+	at AppenderExample.main(AppenderExample.java:11)
+00:44:05.812 [main] INFO AppenderExample - Application shutdown complete

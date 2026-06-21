@@ -1,0 +1,7 @@
+00:44:05.803 [main] INFO AppenderExample - Application started
+00:44:05.808 [main] DEBUG AppenderExample - Loading configuration...
+00:44:05.808 [main] WARN AppenderExample - Configuration file not found, using defaults
+00:44:05.812 [main] ERROR AppenderExample - Failed to connect to database
+java.lang.Exception: Connection timeout
+	at AppenderExample.main(AppenderExample.java:11)
+00:44:05.812 [main] INFO AppenderExample - Application shutdown complete
