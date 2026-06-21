@@ -1,0 +1,17 @@
+--- Scenario 1: Calculate Age ---
+SELECT CalculateAge(TO_DATE('1960-03-10', 'YYYY-MM-DD')) FROM DUAL;
+Result: 65
+
+SELECT CalculateAge(TO_DATE('1990-07-20', 'YYYY-MM-DD')) FROM DUAL;
+Result: 35
+
+--- Scenario 2: Monthly Installment ---
+SELECT CalculateMonthlyInstallment(10000, 6, 5) FROM DUAL;
+Result: 193.33
+
+--- Scenario 3: Has Sufficient Balance ---
+SELECT HasSufficientBalance(1, 500) FROM DUAL;
+Result: TRUE (balance is 1000, sufficient)
+
+SELECT HasSufficientBalance(1, 2000) FROM DUAL;
+Result: FALSE (balance is 500 after transfer, insufficient)
