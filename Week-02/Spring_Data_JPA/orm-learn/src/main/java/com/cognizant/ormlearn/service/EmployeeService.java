@@ -1,5 +1,7 @@
 package com.cognizant.ormlearn.service;
 
+import java.util.List;
+
 import com.cognizant.ormlearn.model.Employee;
 import com.cognizant.ormlearn.repository.EmployeeRepository;
 import org.slf4j.Logger;
@@ -27,5 +29,23 @@ public class EmployeeService {
         LOGGER.info("Start");
         employeeRepository.save(employee);
         LOGGER.info("End");
+    }
+
+    @Transactional
+    public List<Employee> getAllPermanentEmployees() {
+        LOGGER.info("Start");
+        return employeeRepository.getAllPermanentEmployees();
+    }
+
+    @Transactional
+    public double getAverageSalary(int id) {
+        LOGGER.info("Start");
+        return employeeRepository.getAverageSalary(id);
+    }
+
+    @Transactional
+    public List<Employee> getAllEmployeesNative() {
+        LOGGER.info("Start");
+        return employeeRepository.getAllEmployeesNative();
     }
 }

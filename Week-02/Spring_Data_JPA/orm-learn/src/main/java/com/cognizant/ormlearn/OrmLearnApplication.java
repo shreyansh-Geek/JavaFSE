@@ -1,16 +1,23 @@
 package com.cognizant.ormlearn;
 
+import com.cognizant.ormlearn.model.Attempt;
+import com.cognizant.ormlearn.model.AttemptOption;
+import com.cognizant.ormlearn.model.AttemptQuestion;
 import com.cognizant.ormlearn.model.Country;
 import com.cognizant.ormlearn.model.Department;
 import com.cognizant.ormlearn.model.Employee;
+import com.cognizant.ormlearn.model.Options;
+import com.cognizant.ormlearn.model.Question;
 import com.cognizant.ormlearn.model.Skill;
 import com.cognizant.ormlearn.model.Stock;
 import com.cognizant.ormlearn.repository.StockRepository;
+import com.cognizant.ormlearn.service.AttemptService;
 import com.cognizant.ormlearn.service.CountryService;
 import com.cognizant.ormlearn.service.DepartmentService;
 import com.cognizant.ormlearn.service.EmployeeService;
 import com.cognizant.ormlearn.service.SkillService;
 import com.cognizant.ormlearn.service.exception.CountryNotFoundException;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -32,6 +39,7 @@ public class OrmLearnApplication {
     private static EmployeeService employeeService;
     private static DepartmentService departmentService;
     private static SkillService skillService;
+    private static AttemptService attemptService;
 
     public static void main(String[] args) throws CountryNotFoundException {
         ApplicationContext context = SpringApplication.run(OrmLearnApplication.class, args);
@@ -40,6 +48,7 @@ public class OrmLearnApplication {
         employeeService = context.getBean(EmployeeService.class);
         departmentService = context.getBean(DepartmentService.class);
         skillService = context.getBean(SkillService.class);
+        attemptService = context.getBean(AttemptService.class);
 
         LOGGER.info("Inside main");
 
@@ -56,16 +65,22 @@ public class OrmLearnApplication {
         testGetTop3ByVolume();
         testGetTop3LowestByCode();
 
+        // Hands-on 3: HQL Fetch (Quiz)
+        testGetAttemptDetails();
+
         // Hands-on 4: Many-to-One (Employee -> Department)
         testGetEmployee();
         testAddEmployee();
         testUpdateEmployee();
 
-        // Hands-on 5: One-to-Many (Department -> Employee)
-        testGetDepartment();
+        // Hands-on 2 (HQL): GetAllPermanentEmployees with fetch
+        testGetAllPermanentEmployees();
 
-        // Hands-on 6: Many-to-Many (Employee <-> Skill)
-        testAddSkillToEmployee();
+        // Hands-on 4 (HQL Aggregate): Average salary
+        testGetAverageSalary();
+
+        // Hands-on 5 (Native Query): GetAllEmployeesNative
+        testGetAllEmployeesNative();
     }
 
     // ========== Hands-on 1: Country Query Methods ==========
@@ -192,5 +207,65 @@ public class OrmLearnApplication {
         employeeService.save(employee);
         LOGGER.debug("Employee Skills:{}", employee.getSkillList());
         LOGGER.info("End - addSkillToEmployee");
+    }
+
+    // ========== Hands-on 3: HQL Fetch (Quiz Attempt Details) ==========
+
+    private static void testGetAttemptDetails() {
+        LOGGER.info("Start - getAttemptDetails");
+        Attempt attempt = attemptService.getAttempt(1, 1);
+        LOGGER.debug("User:{}", attempt.getUser().getName());
+        LOGGER.debug("Date:{}", attempt.getDate());
+        LOGGER.debug("Score:{}", attempt.getScore());
+        for (AttemptQuestion aq : attempt.getAttemptQuestions()) {
+            Question q = aq.getQuestion();
+            LOGGER.debug("Question:{}", q.getText());
+            LOGGER.debug("Options:");
+            int idx = 1;
+            for (Options o : q.getOptions()) {
+                boolean selected = false;
+                for (AttemptOption ao : aq.getAttemptOptions()) {
+                    if (ao.getOptions().getId() == o.getId()) {
+                        selected = ao.isSelected();
+                        break;
+                    }
+                }
+                LOGGER.debug("{}) {}\t{}\t{}", idx, o.getText(), o.getScore(), selected);
+                idx++;
+            }
+            LOGGER.debug("---");
+        }
+        LOGGER.info("End - getAttemptDetails");
+    }
+
+    // ========== Hands-on 2 (HQL): GetAllPermanentEmployees ==========
+
+    private static void testGetAllPermanentEmployees() {
+        LOGGER.info("Start - getAllPermanentEmployees");
+        List<Employee> employees = employeeService.getAllPermanentEmployees();
+        LOGGER.debug("Permanent Employees:{}", employees);
+        for (Employee e : employees) {
+            LOGGER.debug("Skills:{}", e.getSkillList());
+            LOGGER.debug("Department:{}", e.getDepartment());
+        }
+        LOGGER.info("End - getAllPermanentEmployees");
+    }
+
+    // ========== Hands-on 4 (HQL Aggregate): Average Salary ==========
+
+    private static void testGetAverageSalary() {
+        LOGGER.info("Start - getAverageSalary");
+        double avg = employeeService.getAverageSalary(1);
+        LOGGER.debug("Average Salary of Engineering:{}", avg);
+        LOGGER.info("End - getAverageSalary");
+    }
+
+    // ========== Hands-on 5 (Native Query): GetAllEmployeesNative ==========
+
+    private static void testGetAllEmployeesNative() {
+        LOGGER.info("Start - getAllEmployeesNative");
+        List<Employee> employees = employeeService.getAllEmployeesNative();
+        LOGGER.debug("Native Employees:{}", employees);
+        LOGGER.info("End - getAllEmployeesNative");
     }
 }

@@ -1,31 +1,31 @@
 package com.cognizant.ormlearn.model;
 
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import java.util.Set;
 
 @Entity
-@Table(name = "department")
-public class Department {
+@Table(name = "user")
+public class QuizUser {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "dp_id")
+    @Column(name = "us_id")
     private int id;
 
-    @Column(name = "dp_name")
+    @Column(name = "us_name")
     private String name;
 
-    @OneToMany(mappedBy = "department")
-    private Set<Employee> employeeList;
+    @OneToMany(mappedBy = "user")
+    private Set<Attempt> attempts;
 
-    public Department() {
+    public QuizUser() {
     }
 
     public int getId() {
@@ -44,16 +44,16 @@ public class Department {
         this.name = name;
     }
 
-    public Set<Employee> getEmployeeList() {
-        return employeeList;
+    public Set<Attempt> getAttempts() {
+        return attempts;
     }
 
-    public void setEmployeeList(Set<Employee> employeeList) {
-        this.employeeList = employeeList;
+    public void setAttempts(Set<Attempt> attempts) {
+        this.attempts = attempts;
     }
 
     @Override
     public String toString() {
-        return "Department [id=" + id + ", name=" + name + "]";
+        return "QuizUser [id=" + id + ", name=" + name + "]";
     }
 }

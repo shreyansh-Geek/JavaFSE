@@ -316,3 +316,49 @@ INSERT INTO employee_skill (es_em_id, es_sk_id) VALUES (2, 1);
 INSERT INTO employee_skill (es_em_id, es_sk_id) VALUES (2, 2);
 INSERT INTO employee_skill (es_em_id, es_sk_id) VALUES (2, 4);
 INSERT INTO employee_skill (es_em_id, es_sk_id) VALUES (4, 3);
+
+-- Quiz User data
+INSERT INTO user (us_name) VALUES ('Jack');
+
+-- Question data
+INSERT INTO question (qt_text) VALUES ('What is the extension of the hyper text markup language file?');
+INSERT INTO question (qt_text) VALUES ('What is the maximum level of heading tag can be used in a HTML page?');
+INSERT INTO question (qt_text) VALUES ('The HTML document itself begins with <html> and ends </html>. State True of False');
+INSERT INTO question (qt_text) VALUES ('Choose the right option to store text value value in a variable');
+
+-- Options data (Q1)
+INSERT INTO options (op_text, op_score, qt_id) VALUES ('.xhtm', 0.0, 1);
+INSERT INTO options (op_text, op_score, qt_id) VALUES ('.ht', 0.0, 1);
+INSERT INTO options (op_text, op_score, qt_id) VALUES ('.html', 1.0, 1);
+INSERT INTO options (op_text, op_score, qt_id) VALUES ('.htmx', 0.0, 1);
+
+-- Options data (Q2)
+INSERT INTO options (op_text, op_score, qt_id) VALUES ('5', 0.0, 2);
+INSERT INTO options (op_text, op_score, qt_id) VALUES ('3', 0.0, 2);
+INSERT INTO options (op_text, op_score, qt_id) VALUES ('4', 0.0, 2);
+INSERT INTO options (op_text, op_score, qt_id) VALUES ('6', 1.0, 2);
+
+-- Options data (Q3)
+INSERT INTO options (op_text, op_score, qt_id) VALUES ('false', 0.0, 3);
+INSERT INTO options (op_text, op_score, qt_id) VALUES ('true', 1.0, 3);
+
+-- Options data (Q4)
+INSERT INTO options (op_text, op_score, qt_id) VALUES ('''John''', 0.5, 4);
+INSERT INTO options (op_text, op_score, qt_id) VALUES ('John', 0.0, 4);
+INSERT INTO options (op_text, op_score, qt_id) VALUES ('"John"', 0.5, 4);
+INSERT INTO options (op_text, op_score, qt_id) VALUES ('/John/', 0.0, 4);
+
+-- Attempt data
+INSERT INTO attempt (at_date, us_id, at_score) VALUES ('2024-01-15', 1, 2.5);
+
+-- AttemptQuestion data
+INSERT INTO attempt_question (at_id, qt_id) VALUES (1, 1);
+INSERT INTO attempt_question (at_id, qt_id) VALUES (1, 2);
+INSERT INTO attempt_question (at_id, qt_id) VALUES (1, 3);
+INSERT INTO attempt_question (at_id, qt_id) VALUES (1, 4);
+
+-- AttemptOption data
+INSERT INTO attempt_option (aq_id, op_id, ao_selected) VALUES (1, 3, true);
+INSERT INTO attempt_option (aq_id, op_id, ao_selected) VALUES (2, 6, true);
+INSERT INTO attempt_option (aq_id, op_id, ao_selected) VALUES (3, 10, true);
+INSERT INTO attempt_option (aq_id, op_id, ao_selected) VALUES (4, 11, true);
