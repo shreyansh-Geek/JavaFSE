@@ -1,0 +1,8 @@
+Spring Boot application initialized successfully.
+Compilation: OK (all classes compiled without errors)
+Runtime: Application starts on port 8080 with H2 in-memory database
+  - POST /books - Add a book
+  - GET /books - Get all books
+  - GET /books/{id} - Get book by ID
+
+Note: Run with 'mvn spring-boot:run' for full execution with all transitive dependencies.
