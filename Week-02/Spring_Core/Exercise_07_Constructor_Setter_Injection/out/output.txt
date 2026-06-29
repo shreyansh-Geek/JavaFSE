@@ -1,0 +1,3 @@
+Constructor injection: BookRepository set
+Adding book...
+Book saved to database.
