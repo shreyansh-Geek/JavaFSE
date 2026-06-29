@@ -1,0 +1,4 @@
+Before: addBook() is about to execute
+Adding book via service...
+Book saved to database.
+After: addBook() has executed
