@@ -1,10 +1,4 @@
-DROP TABLE IF EXISTS country;
-
-CREATE TABLE country (
-    co_code VARCHAR(2) PRIMARY KEY,
-    co_name VARCHAR(100) NOT NULL
-);
-
+-- Country data
 INSERT INTO country (co_code, co_name) VALUES ('AF', 'Afghanistan');
 INSERT INTO country (co_code, co_name) VALUES ('AL', 'Albania');
 INSERT INTO country (co_code, co_name) VALUES ('DZ', 'Algeria');
@@ -58,12 +52,12 @@ INSERT INTO country (co_code, co_name) VALUES ('CG', 'Congo');
 INSERT INTO country (co_code, co_name) VALUES ('CD', 'Congo, the Democratic Republic of the');
 INSERT INTO country (co_code, co_name) VALUES ('CK', 'Cook Islands');
 INSERT INTO country (co_code, co_name) VALUES ('CR', 'Costa Rica');
+INSERT INTO country (co_code, co_name) VALUES ('CI', 'Cote d''Ivoire');
 INSERT INTO country (co_code, co_name) VALUES ('HR', 'Croatia');
 INSERT INTO country (co_code, co_name) VALUES ('CU', 'Cuba');
-INSERT INTO country (co_code, co_name) VALUES ('CW', 'Curaçao');
+INSERT INTO country (co_code, co_name) VALUES ('CW', 'Curacao');
 INSERT INTO country (co_code, co_name) VALUES ('CY', 'Cyprus');
 INSERT INTO country (co_code, co_name) VALUES ('CZ', 'Czech Republic');
-INSERT INTO country (co_code, co_name) VALUES ('CI', 'Côte d''Ivoire');
 INSERT INTO country (co_code, co_name) VALUES ('DK', 'Denmark');
 INSERT INTO country (co_code, co_name) VALUES ('DJ', 'Djibouti');
 INSERT INTO country (co_code, co_name) VALUES ('DM', 'Dominica');
@@ -187,8 +181,8 @@ INSERT INTO country (co_code, co_name) VALUES ('QA', 'Qatar');
 INSERT INTO country (co_code, co_name) VALUES ('RO', 'Romania');
 INSERT INTO country (co_code, co_name) VALUES ('RU', 'Russian Federation');
 INSERT INTO country (co_code, co_name) VALUES ('RW', 'Rwanda');
-INSERT INTO country (co_code, co_name) VALUES ('RE', 'Réunion');
-INSERT INTO country (co_code, co_name) VALUES ('BL', 'Saint Barthélemy');
+INSERT INTO country (co_code, co_name) VALUES ('RE', 'Reunion');
+INSERT INTO country (co_code, co_name) VALUES ('BL', 'Saint Barthelemy');
 INSERT INTO country (co_code, co_name) VALUES ('SH', 'Saint Helena, Ascension and Tristan da Cunha');
 INSERT INTO country (co_code, co_name) VALUES ('KN', 'Saint Kitts and Nevis');
 INSERT INTO country (co_code, co_name) VALUES ('LC', 'Saint Lucia');
@@ -253,4 +247,72 @@ INSERT INTO country (co_code, co_name) VALUES ('EH', 'Western Sahara');
 INSERT INTO country (co_code, co_name) VALUES ('YE', 'Yemen');
 INSERT INTO country (co_code, co_name) VALUES ('ZM', 'Zambia');
 INSERT INTO country (co_code, co_name) VALUES ('ZW', 'Zimbabwe');
-INSERT INTO country (co_code, co_name) VALUES ('AX', 'Åland Islands');
+INSERT INTO country (co_code, co_name) VALUES ('AX', 'Aland Islands');
+
+-- Stock data (Facebook)
+INSERT INTO stock (st_code, st_date, st_open, st_close, st_volume) VALUES ('FB', '2018-10-31', 155.00, 151.79, 60101300);
+INSERT INTO stock (st_code, st_date, st_open, st_close, st_volume) VALUES ('FB', '2018-12-19', 141.21, 133.24, 57404900);
+INSERT INTO stock (st_code, st_date, st_open, st_close, st_volume) VALUES ('FB', '2019-01-31', 165.60, 166.69, 77233600);
+INSERT INTO stock (st_code, st_date, st_open, st_close, st_volume) VALUES ('FB', '2019-09-03', 184.00, 182.39, 9779400);
+INSERT INTO stock (st_code, st_date, st_open, st_close, st_volume) VALUES ('FB', '2019-09-04', 184.65, 187.14, 11308000);
+INSERT INTO stock (st_code, st_date, st_open, st_close, st_volume) VALUES ('FB', '2019-09-05', 188.53, 190.90, 13876700);
+INSERT INTO stock (st_code, st_date, st_open, st_close, st_volume) VALUES ('FB', '2019-09-06', 190.21, 187.49, 15226800);
+INSERT INTO stock (st_code, st_date, st_open, st_close, st_volume) VALUES ('FB', '2019-09-09', 187.73, 188.76, 14722400);
+INSERT INTO stock (st_code, st_date, st_open, st_close, st_volume) VALUES ('FB', '2019-09-10', 187.44, 186.17, 15455900);
+INSERT INTO stock (st_code, st_date, st_open, st_close, st_volume) VALUES ('FB', '2019-09-11', 186.46, 188.49, 11761700);
+INSERT INTO stock (st_code, st_date, st_open, st_close, st_volume) VALUES ('FB', '2019-09-12', 189.86, 187.47, 11419800);
+INSERT INTO stock (st_code, st_date, st_open, st_close, st_volume) VALUES ('FB', '2019-09-13', 187.33, 187.19, 11441100);
+INSERT INTO stock (st_code, st_date, st_open, st_close, st_volume) VALUES ('FB', '2019-09-16', 186.93, 186.22, 8444800);
+INSERT INTO stock (st_code, st_date, st_open, st_close, st_volume) VALUES ('FB', '2019-09-17', 186.66, 188.08, 9671100);
+INSERT INTO stock (st_code, st_date, st_open, st_close, st_volume) VALUES ('FB', '2019-09-18', 188.09, 188.14, 9681900);
+INSERT INTO stock (st_code, st_date, st_open, st_close, st_volume) VALUES ('FB', '2019-09-19', 188.66, 190.14, 10392700);
+INSERT INTO stock (st_code, st_date, st_open, st_close, st_volume) VALUES ('FB', '2019-09-20', 190.66, 189.93, 19934200);
+INSERT INTO stock (st_code, st_date, st_open, st_close, st_volume) VALUES ('FB', '2019-09-23', 189.34, 186.82, 13327600);
+INSERT INTO stock (st_code, st_date, st_open, st_close, st_volume) VALUES ('FB', '2019-09-24', 187.98, 181.28, 18546600);
+INSERT INTO stock (st_code, st_date, st_open, st_close, st_volume) VALUES ('FB', '2019-09-25', 181.45, 182.80, 18068300);
+INSERT INTO stock (st_code, st_date, st_open, st_close, st_volume) VALUES ('FB', '2019-09-26', 181.33, 180.11, 16083300);
+INSERT INTO stock (st_code, st_date, st_open, st_close, st_volume) VALUES ('FB', '2019-09-27', 180.49, 177.10, 14656200);
+
+-- Stock data (Google)
+INSERT INTO stock (st_code, st_date, st_open, st_close, st_volume) VALUES ('GOOGL', '2019-04-22', 1236.67, 1253.76, 954200);
+INSERT INTO stock (st_code, st_date, st_open, st_close, st_volume) VALUES ('GOOGL', '2019-04-23', 1256.64, 1270.59, 1593400);
+INSERT INTO stock (st_code, st_date, st_open, st_close, st_volume) VALUES ('GOOGL', '2019-04-24', 1270.59, 1260.05, 1169800);
+INSERT INTO stock (st_code, st_date, st_open, st_close, st_volume) VALUES ('GOOGL', '2019-04-25', 1270.30, 1267.34, 1567200);
+INSERT INTO stock (st_code, st_date, st_open, st_close, st_volume) VALUES ('GOOGL', '2019-04-26', 1273.38, 1277.42, 1361400);
+INSERT INTO stock (st_code, st_date, st_open, st_close, st_volume) VALUES ('GOOGL', '2019-04-29', 1280.51, 1296.20, 3618400);
+INSERT INTO stock (st_code, st_date, st_open, st_close, st_volume) VALUES ('GOOGL', '2019-10-17', 1251.40, 1252.80, 1047900);
+INSERT INTO stock (st_code, st_date, st_open, st_close, st_volume) VALUES ('GOOGL', '2019-03-15', 1180.00, 1195.30, 2456700);
+
+-- Stock data (Netflix)
+INSERT INTO stock (st_code, st_date, st_open, st_close, st_volume) VALUES ('NFLX', '2018-12-21', 263.83, 246.39, 21397600);
+INSERT INTO stock (st_code, st_date, st_open, st_close, st_volume) VALUES ('NFLX', '2018-12-24', 242.00, 233.88, 9547600);
+INSERT INTO stock (st_code, st_date, st_open, st_close, st_volume) VALUES ('NFLX', '2018-12-26', 233.92, 253.67, 14402700);
+INSERT INTO stock (st_code, st_date, st_open, st_close, st_volume) VALUES ('NFLX', '2019-09-03', 280.00, 275.50, 8500000);
+INSERT INTO stock (st_code, st_date, st_open, st_close, st_volume) VALUES ('NFLX', '2019-09-04', 276.00, 278.30, 7200000);
+
+-- Department data
+INSERT INTO department (dp_name) VALUES ('Engineering');
+INSERT INTO department (dp_name) VALUES ('Human Resources');
+INSERT INTO department (dp_name) VALUES ('Marketing');
+
+-- Employee data
+INSERT INTO employee (em_name, em_salary, em_permanent, em_date_of_birth, em_dp_id) VALUES ('John Doe', 75000, true, '1990-05-15', 1);
+INSERT INTO employee (em_name, em_salary, em_permanent, em_date_of_birth, em_dp_id) VALUES ('Jane Smith', 82000, true, '1988-11-20', 1);
+INSERT INTO employee (em_name, em_salary, em_permanent, em_date_of_birth, em_dp_id) VALUES ('Bob Johnson', 65000, false, '1995-03-10', 2);
+INSERT INTO employee (em_name, em_salary, em_permanent, em_date_of_birth, em_dp_id) VALUES ('Alice Williams', 70000, true, '1992-07-22', 3);
+INSERT INTO employee (em_name, em_salary, em_permanent, em_date_of_birth, em_dp_id) VALUES ('Charlie Brown', 90000, true, '1985-09-01', 1);
+
+-- Skill data
+INSERT INTO skill (sk_name) VALUES ('Java');
+INSERT INTO skill (sk_name) VALUES ('Spring');
+INSERT INTO skill (sk_name) VALUES ('SQL');
+INSERT INTO skill (sk_name) VALUES ('Python');
+
+-- Employee-Skill mapping
+INSERT INTO employee_skill (es_em_id, es_sk_id) VALUES (1, 1);
+INSERT INTO employee_skill (es_em_id, es_sk_id) VALUES (1, 2);
+INSERT INTO employee_skill (es_em_id, es_sk_id) VALUES (1, 3);
+INSERT INTO employee_skill (es_em_id, es_sk_id) VALUES (2, 1);
+INSERT INTO employee_skill (es_em_id, es_sk_id) VALUES (2, 2);
+INSERT INTO employee_skill (es_em_id, es_sk_id) VALUES (2, 4);
+INSERT INTO employee_skill (es_em_id, es_sk_id) VALUES (4, 3);
