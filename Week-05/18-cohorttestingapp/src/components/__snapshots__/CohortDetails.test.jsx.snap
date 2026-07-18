@@ -1,0 +1,50 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Cohort Details Component > should always render same html 1`] = `
+<DocumentFragment>
+  <div
+    class="card"
+    style="border-left: 4px solid var(--accent-color); padding: 1.5rem;"
+  >
+    <h3
+      style="color: var(--accent-color);"
+    >
+      COH-101
+    </h3>
+    <dl
+      style="margin-top: 1rem;"
+    >
+      <dt
+        style="font-weight: 600; color: var(--text-secondary);"
+      >
+        Cohort Name
+      </dt>
+      <dd
+        style="color: var(--text-primary); margin-bottom: 0.5rem;"
+      >
+        Java FSE
+      </dd>
+      <dt
+        style="font-weight: 600; color: var(--text-secondary);"
+      >
+        Status
+      </dt>
+      <dd
+        style="color: var(--text-primary); margin-bottom: 0.5rem; text-transform: capitalize;"
+      >
+        ongoing
+      </dd>
+      <dt
+        style="font-weight: 600; color: var(--text-secondary);"
+      >
+        Start Date
+      </dt>
+      <dd
+        style="color: var(--text-primary);"
+      >
+        2026-06-01
+      </dd>
+    </dl>
+  </div>
+</DocumentFragment>
+`;
