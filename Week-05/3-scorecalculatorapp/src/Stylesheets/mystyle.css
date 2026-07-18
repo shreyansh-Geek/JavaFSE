@@ -1,0 +1,44 @@
+.score-calculator {
+  background: rgba(30, 41, 59, 0.8);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.scorecard {
+  background: #1e293b;
+  border-left: 4px solid var(--accent-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.score-details dt {
+  font-weight: 600;
+  color: var(--accent-color);
+  margin-top: 0.75rem;
+}
+
+.score-details dd {
+  margin-left: 0;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+}
+
+.average-badge {
+  display: inline-block;
+  background: var(--success-color);
+  color: #0f172a;
+  padding: 0.35rem 1rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  margin-top: 0.5rem;
+}
+
+.goal-status {
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
